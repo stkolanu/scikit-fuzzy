@@ -151,8 +151,8 @@ class FuzzyVariableVisualizer(object):
         self.ax.tick_params(direction='out')
 
         # Label the axes
-        self.ax.set_ylabel('Membership',fontsize=20)
-        self.ax.set_xlabel(self.fuzzy_var.label,fontsize=18)
+        self.ax.set_ylabel('Membership',fontsize=26)
+        self.ax.set_xlabel(self.fuzzy_var.label,fontsize=26)
 
 
 class ControlSystemVisualizer(object):
