@@ -45,8 +45,8 @@ class FuzzyVariableVisualizer(object):
                              "with a `FuzzyVariable` or a `Term`.")
 
         self.fig, self.ax = plt.subplots()
-        plt.xticks(fontsize = 18)
-        plt.yticks(fontsize = 24)
+        plt.xticks(fontsize = 26)
+        plt.yticks(fontsize = 26)
         self.fig.set_figheight(5)
         self.fig.set_figwidth(10)
         self.plots = {}
@@ -139,7 +139,7 @@ class FuzzyVariableVisualizer(object):
                                            linewidth=lw)
 
         # Place legend in upper left
-        self.ax.legend(framealpha=0.5,fontsize=20)
+        self.ax.legend(framealpha=0.5,fontsize=26)
 
         # Turn off top/right axes
         self.ax.spines['top'].set_visible(False)
