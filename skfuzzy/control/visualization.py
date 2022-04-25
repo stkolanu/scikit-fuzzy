@@ -45,6 +45,10 @@ class FuzzyVariableVisualizer(object):
                              "with a `FuzzyVariable` or a `Term`.")
 
         self.fig, self.ax = plt.subplots()
+        plt.xticks(fontsize = 18)
+        plt.yticks(fontsize = 24)
+        self.fig.set_figheight(5)
+        self.fig.set_figwidth(10)
         self.plots = {}
 
     def view(self, sim=None, *args, **kwargs):
@@ -135,7 +139,7 @@ class FuzzyVariableVisualizer(object):
                                            linewidth=lw)
 
         # Place legend in upper left
-        self.ax.legend(framealpha=0.5)
+        self.ax.legend(framealpha=0.5,fontsize=20)
 
         # Turn off top/right axes
         self.ax.spines['top'].set_visible(False)
@@ -147,8 +151,8 @@ class FuzzyVariableVisualizer(object):
         self.ax.tick_params(direction='out')
 
         # Label the axes
-        self.ax.set_ylabel('Membership')
-        self.ax.set_xlabel(self.fuzzy_var.label)
+        self.ax.set_ylabel('Membership',fontsize=20)
+        self.ax.set_xlabel(self.fuzzy_var.label,fontsize=18)
 
 
 class ControlSystemVisualizer(object):
