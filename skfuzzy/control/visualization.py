@@ -129,9 +129,9 @@ class FuzzyVariableVisualizer(object):
         # Make the plots
         for key, term in self.fuzzy_var.terms.items():
             # If this is a Term, bold the active mf
-            lw = 1
+            lw = 6
             if self.term == key:
-                lw = 3
+                lw = 6
 
             self.plots[key] = self.ax.plot(self.fuzzy_var.universe,
                                            term.mf,
