@@ -47,6 +47,7 @@ class FuzzyVariableVisualizer(object):
         self.fig, self.ax = plt.subplots()
         plt.xticks(fontsize = 26)
         plt.yticks(fontsize = 26)
+        plt.figure(dpi=1200)
         self.fig.set_figheight(5)
         self.fig.set_figwidth(10)
         self.plots = {}
@@ -117,7 +118,7 @@ class FuzzyVariableVisualizer(object):
 
                 self.ax.plot([crisp_value] * 2, [0, y],
                              color='k', lw=3, label='crisp value')
-
+                self.fig.savefig("/content/"+self.fuzzy_var.label.replace("/","_")+".png",dpi=1200)
         return self.fig, self.ax
 
     def _init_plot(self):
@@ -140,6 +141,7 @@ class FuzzyVariableVisualizer(object):
 
         # Place legend in upper left
         self.ax.legend(framealpha=0.5,fontsize=26)
+        self.fig.savefig("/content/"+self.fuzzy_var.label.replace("/","_")+".png",dpi=1200)
 
         # Turn off top/right axes
         self.ax.spines['top'].set_visible(False)
